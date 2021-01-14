@@ -1,6 +1,7 @@
 # Pub
  
 DB:
+```
 CREATE TABLE car (
     id           INTEGER       PRIMARY KEY
                                UNIQUE,
@@ -16,4 +17,5 @@ CREATE TABLE car (
     email        VARCHAR,
     password     VARCHAR
 );
+```
 

@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+html {
+    color: #222;
+    font-size: 100%;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    padding: inherit;
+    margin: inherit;
+    list-style: none;
+}
+main {
+    display: grid;
+    -ms-grid: auto / repeat(3, 1fr);;
+    grid: auto / repeat(3, 1fr);
+    padding: 20px 0;
+    min-height: -webkit-fill-available;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+button {
+    background: aliceblue;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+}
+br{
+    clear:both;
+}
+fieldset {
+    border: none;
+}
+fieldset h3 {
+    margin: 0;
+}
+section.create h3 {
+    font-size: small;
+}
+fieldset input, fieldset select {
+    width: 100%;
+}
+fieldset input, fieldset select {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+span.alert {
+    color: red;
+    display: block;
+    margin-top: 5px;
+}
+.background-green{
+    background-color: palegreen;
+}
+.background-red{
+    background-color: palevioletred;
+}
+.background-blue{
+    background-color: dodgerblue;
+}
+
+.results_container {
+    display: inline-grid;
+    -ms-grid-column: 2 / 3;
+    grid-column: 2 / 3;
+    user-select: none;
+}
+
+span.results_count {
+    margin: 20px 0;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin:10px 0;
+}
+thead {
+    font-size: .87em;
+    border-bottom: 1px solid #bfbfbf;
+}
+table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eff2f7;
+    padding: .35rem 1rem;
+}
+tbody{
+    font-size: small;
+}
+table td{
+    padding: .35rem 1rem;
+    border-top: 1px solid #e2e8ee;
+}
+table tr:first-of-type td{
+    padding-top: 10px;
+}
+table tr:nth-of-type(2n+0){
+    background: #fbfbfb;
+}
+section.create,
+section.edit{
+    display: grid;
+    grid: auto / repeat(2, 1fr);
+    grid-template-areas:
+        "header header"
+        "general attributes"
+        "login login"
+        "footer footer";
+    grid-gap: 20px;
+    min-width: 650px;
+    margin: 50px 0;
+    font-size: small;
+
+    -ms-grid-column: 2 / 3;
+    grid-column: 2 / 3;
+}
+section.header {
+    grid-area: header;
+    position: relative;
+}
+section.footer {
+    grid-area: footer;
+}
+section.general {
+    grid-area: general;
+}
+section.login {
+    grid-area: login;
+}
+section.attributes {
+    grid-area: attributes;
+}
+span.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+section.create h2 {
+    font-size: large;
+}
+section.create button,
+section.edit button{
+    width: 100%;
+}
+
+
+section.pagination {
+    padding: 20px 0;
+    display: grid;
+    -ms-grid: auto / 3fr auto 3fr;
+    grid: auto / 3fr auto 3fr;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: smaller;
+}
+
+.pagination ul {
+    display: grid;
+    -ms-grid: auto / repeat(10, 1fr);
+    grid: auto / repeat(10, 1fr);
+}
+
+.pagination ul li {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+
+li.active {
+    background-color: dimgray;
+    color: white;
+    border-radius: 6px;
+}
+
+div[class^=btn_] {
+    padding: 5px;
+    border-radius: 4px;
+}
+
+div[class^=btn_]:not(.disabled):hover {
+    background-color: lightgray;
+}
+
+.btn_next {
+    -ms-justify-self: end;
+    justify-self: end;
+}
+
+.btn_back {
+    -ms-justify-self: start;
+    justify-self: start;
+}
+
+.disabled {
+    cursor: not-allowed;
+    color: lightgray;
+}
+
+
+.hidden{
+    display: none!important;
+}
